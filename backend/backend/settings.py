@@ -148,12 +148,16 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 #Email settings
 
 # Gmail SMTP
+
+
+import os
+
 EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
-EMAIL_HOST = 'smtp.gmail.com'
-EMAIL_PORT = 587
-EMAIL_USE_TLS = True
-EMAIL_HOST_USER = 'pranav072003@gmail.com'
-EMAIL_HOST_PASSWORD = 'ilnj rlao jebj mtii'  # Use App Password if 2FA is enabled
+EMAIL_HOST = os.environ.get('EMAIL_HOST')
+EMAIL_PORT = int(os.environ.get('EMAIL_PORT', 587))
+EMAIL_USE_TLS = os.environ.get('EMAIL_USE_TLS', 'True') == 'True'
+EMAIL_HOST_USER = os.environ.get('EMAIL_HOST_USER')
+EMAIL_HOST_PASSWORD = os.environ.get('EMAIL_HOST_PASSWORD')
 
 
 #Set Media Settings (optional for thumbnails)
