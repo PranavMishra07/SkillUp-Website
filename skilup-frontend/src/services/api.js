@@ -1,6 +1,6 @@
 import axios from 'axios';
 
-const API_URL = 'http://localhost:8000/api'; // Update with your Django backend URL
+const API_URL = "https://skillup-website.onrender.com";// Update with your Django backend URL
 
 export const registerUser  = async (userData) => {
   return await axios.post(`${API_URL}/auth/register/`, userData);
