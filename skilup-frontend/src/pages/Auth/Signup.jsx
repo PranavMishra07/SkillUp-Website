@@ -20,7 +20,7 @@ export default function Signup() {
     }
 
     try {
-      const res = await axios.post("http://127.0.0.1:8000/api/signup/", {
+      const res = await axios.post("https://skillup-website.onrender.com/api/signup/", {
         email,
         password,
         role,
@@ -38,7 +38,7 @@ export default function Signup() {
     e.preventDefault();
 
     try {
-      const res = await axios.post("http://127.0.0.1:8000/api/verify-otp/", {
+      const res = await axios.post("https://skillup-website.onrender.com/api/verify-otp/", {
         email,
         otp,
       });

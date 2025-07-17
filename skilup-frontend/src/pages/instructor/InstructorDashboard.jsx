@@ -13,7 +13,7 @@ export default function InstructorDashboard() {
 
   const fetchMyCourses = async () => {
     try {
-      const res = await axios.get("http://127.0.0.1:8000/api/courses/", {
+      const res = await axios.get("https://skillup-website.onrender.com/api/courses/", {
         headers: {
           Authorization: `Bearer ${token}`,
         },

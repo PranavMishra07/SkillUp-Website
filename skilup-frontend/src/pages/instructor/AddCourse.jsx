@@ -32,7 +32,7 @@ const handleCourseSubmit = async (e) => {
   if (thumbnail) formData.append("thumbnail", thumbnail);
 
   try {
-    await axios.post("http://127.0.0.1:8000/api/courses/create/", formData, {
+    await axios.post("https://skillup-website.onrender.com/api/courses/create/", formData, {
       headers: {
         Authorization: `Bearer ${token}`,
         "Content-Type": "multipart/form-data",

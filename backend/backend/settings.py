@@ -25,7 +25,7 @@ SECRET_KEY = 'django-insecure-27dyy3sk9z7n!8kq$()^p$)m0l)yyzm8b(xx_uuw%vzx#*4q!j
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ["https://skillup-website.onrender.com","127.0.0.1","localhost"]
 
 
 # Application definition
@@ -90,8 +90,12 @@ TEMPLATES = [
 
 WSGI_APPLICATION = 'backend.wsgi.application'
 
-
-# Database
+CORS_ALLOWED_ORIGINS = [
+    "http://localhost:5173",
+    "http://localhost:5174",
+    "https://skillup-website-1.onrender.com"
+]
+# Database  
 # https://docs.djangoproject.com/en/5.2/ref/settings/#databases
 
 DATABASES = {

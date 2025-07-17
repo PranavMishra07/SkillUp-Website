@@ -4,7 +4,7 @@ export default function CourseCard({ course }) {
   return (
     <div className="bg-white rounded-lg shadow-md overflow-hidden">
       <img
-        src={`http://127.0.0.1:8000${course.thumbnail}` }
+        src={`https://skillup-website.onrender.com${course.thumbnail}` }
         alt={course.title}
         className="w-full h-48 object-cover"
       />

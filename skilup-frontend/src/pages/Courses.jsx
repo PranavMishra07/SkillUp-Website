@@ -13,7 +13,7 @@ export default function Courses() {
   const fetchCourses = async () => {
     try {
       const res = await axios.get(
-        `http://127.0.0.1:8000/api/courses/?search=${search}`
+        `https://skillup-website.onrender.com/api/courses/?search=${search}`
       );
       setCourses(res.data);
     } catch (err) {

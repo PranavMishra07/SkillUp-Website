@@ -15,7 +15,7 @@ export default function AdminDashboard() {
 
   const fetchStats = async () => {
     try {
-      const res = await axios.get("http://127.0.0.1:8000/api/admin/stats/", {
+      const res = await axios.get("https://skillup-website.onrender.com/api/admin/stats/", {
         headers: {
           Authorization: `Bearer ${token}`,
         },
@@ -28,7 +28,7 @@ export default function AdminDashboard() {
 
   const fetchPendingInstructors = async () => {
     try {
-      const res = await axios.get("http://127.0.0.1:8000/api/admin/pending-instructors/", {
+      const res = await axios.get("https://skillup-website.onrender.com/api/admin/pending-instructors/", {
         headers: {
           Authorization: `Bearer ${token}`,
         },
@@ -42,7 +42,7 @@ export default function AdminDashboard() {
   const handleApprove = async (id) => {
     try {
       await axios.patch(
-        `http://127.0.0.1:8000/api/admin/approve-instructor/${id}/`,
+        `https://skillup-website.onrender.com/api/admin/approve-instructor/${id}/`,
         {},
         {
           headers: {

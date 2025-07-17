@@ -24,7 +24,7 @@ export default function AdminDashboard() {
 
   const fetchUsers = async () => {
     try {
-      const res = await axios.get("http://127.0.0.1:8000/api/admin/users/", {
+      const res = await axios.get("https://skillup-website.onrender.com/api/admin/users/", {
         headers: { Authorization: `Bearer ${token}` },
       });
       setUsers(res.data);
@@ -35,7 +35,7 @@ export default function AdminDashboard() {
 
   const fetchCourses = async () => {
     try {
-      const res = await axios.get("http://127.0.0.1:8000/api/courses/admin/courses/", {
+      const res = await axios.get("https://skillup-website.onrender.com/api/courses/admin/courses/", {
         headers: { Authorization: `Bearer ${token}` },
       });
       setCourses(res.data);
@@ -47,7 +47,7 @@ export default function AdminDashboard() {
 
   const fetchReviews = async () => {
   try {
-    const res = await axios.get("http://127.0.0.1:8000/api/courses/admin/reviews/", {
+    const res = await axios.get("https://skillup-website.onrender.com/api/courses/admin/reviews/", {
       headers: { Authorization: `Bearer ${token}` },
     });
     setReviews(res.data);
@@ -63,7 +63,7 @@ export default function AdminDashboard() {
 
   const handleApprove = async (userId) => {
     try {
-      await axios.patch(`http://127.0.0.1:8000/api/admin/approve/${userId}/`, {}, {
+      await axios.patch(`https://skillup-website.onrender.com/api/admin/approve/${userId}/`, {}, {
         headers: { Authorization: `Bearer ${token}` },
       });
       setMessage("Instructor approved successfully.");
@@ -76,7 +76,7 @@ export default function AdminDashboard() {
   const handleDeleteUser = async (userId) => {
     if (!window.confirm("Are you sure you want to delete this user?")) return;
     try {
-      await axios.delete(`http://127.0.0.1:8000/api/admin/user/${userId}/`, {
+      await axios.delete(`https://skillup-website.onrender.com/api/admin/user/${userId}/`, {
         headers: { Authorization: `Bearer ${token}` },
       });
       setMessage("User deleted successfully.");
@@ -89,7 +89,7 @@ export default function AdminDashboard() {
   const handleDeleteCourse = async (courseId) => {
     if (!window.confirm("Are you sure you want to delete this course?")) return;
     try {
-      await axios.delete(`http://127.0.0.1:8000/api/admin/course/${courseId}/`, {
+      await axios.delete(`https://skillup-website.onrender.com/api/admin/course/${courseId}/`, {
         headers: { Authorization: `Bearer ${token}` },
       });
       setMessage("Course deleted successfully.");
@@ -103,7 +103,7 @@ export default function AdminDashboard() {
   const handleDeleteReview = async (reviewId) => {
   if (!window.confirm("Delete this review?")) return;
   try {
-    await axios.delete(`http://127.0.0.1:8000/api/courses/admin/review/${reviewId}/delete/`, {
+    await axios.delete(`https://skillup-website.onrender.com/api/courses/admin/review/${reviewId}/delete/`, {
       headers: { Authorization: `Bearer ${token}` },
     });
     setMessage("Review deleted.");
@@ -277,7 +277,7 @@ export default function AdminDashboard() {
 
 //   const fetchUsers = async () => {
 //     try {
-//       const res = await axios.get("http://127.0.0.1:8000/api/admin/users/", {
+//       const res = await axios.get("https://skillup-website.onrender.com/api/admin/users/", {
 //         headers: { Authorization: `Bearer ${token}` },
 //       });
 //       setUsers(res.data);
@@ -288,7 +288,7 @@ export default function AdminDashboard() {
 
 //   const fetchCourses = async () => {
 //     try {
-//       const res = await axios.get("http://127.0.0.1:8000/api/courses/admin/courses/", {
+//       const res = await axios.get("https://skillup-website.onrender.com/api/courses/admin/courses/", {
 //         headers: { Authorization: `Bearer ${token}` },
 //       });
 //       setCourses(res.data);
@@ -299,7 +299,7 @@ export default function AdminDashboard() {
 
 //   const fetchReviews = async () => {
 //     try {
-//       const res = await axios.get("http://127.0.0.1:8000/api/courses/admin/reviews/", {
+//       const res = await axios.get("https://skillup-website.onrender.com/api/courses/admin/reviews/", {
 //         headers: { Authorization: `Bearer ${token}` },
 //       });
 //       setReviews(res.data);
@@ -310,7 +310,7 @@ export default function AdminDashboard() {
 
 //   const handleApprove = async (userId) => {
 //     try {
-//       await axios.patch(`http://127.0.0.1:8000/api/admin/approve/${userId}/`, {}, {
+//       await axios.patch(`https://skillup-website.onrender.com/api/admin/approve/${userId}/`, {}, {
 //         headers: { Authorization: `Bearer ${token}` },
 //       });
 //       setMessage("Instructor approved successfully.");
@@ -323,7 +323,7 @@ export default function AdminDashboard() {
 //   const handleDeleteUser = async (userId) => {
 //     if (!window.confirm("Are you sure you want to delete this user?")) return;
 //     try {
-//       await axios.delete(`http://127.0.0.1:8000/api/admin/user/${userId}/`, {
+//       await axios.delete(`https://skillup-website.onrender.com/api/admin/user/${userId}/`, {
 //         headers: { Authorization: `Bearer ${token}` },
 //       });
 //       setMessage("User deleted successfully.");
@@ -336,7 +336,7 @@ export default function AdminDashboard() {
 //   const handleDeleteCourse = async (courseId) => {
 //     if (!window.confirm("Are you sure you want to delete this course?")) return;
 //     try {
-//       await axios.delete(`http://127.0.0.1:8000/api/admin/course/${courseId}/`, {
+//       await axios.delete(`https://skillup-website.onrender.com/api/admin/course/${courseId}/`, {
 //         headers: { Authorization: `Bearer ${token}` },
 //       });
 //       setMessage("Course deleted successfully.");
@@ -349,7 +349,7 @@ export default function AdminDashboard() {
 //   const handleDeleteReview = async (reviewId) => {
 //     if (!window.confirm("Are you sure you want to delete this review?")) return;
 //     try {
-//       await axios.delete(`http://127.0.0.1:8000/api/admin/courses/admin/review/${reviewId}`, {
+//       await axios.delete(`https://skillup-website.onrender.com/api/admin/courses/admin/review/${reviewId}`, {
 //         headers: { Authorization: `Bearer ${token}` },
 //       });
 //       setMessage("Review deleted successfully.");

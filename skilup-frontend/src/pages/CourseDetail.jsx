@@ -20,7 +20,7 @@ export default function CourseDetail() {
 
   const fetchCourse = async () => {
     try {
-      const res = await axios.get(`http://127.0.0.1:8000/api/courses/${id}/`);
+      const res = await axios.get(`https://skillup-website.onrender.com/api/courses/${id}/`);
       setCourse(res.data);
     } catch (err) {
       console.error("Course fetch error", err);
@@ -29,7 +29,7 @@ export default function CourseDetail() {
 
   const fetchReviews = async () => {
     try {
-      const res = await axios.get(`http://127.0.0.1:8000/api/courses/${id}/reviews/`);
+      const res = await axios.get(`https://skillup-website.onrender.com/api/courses/${id}/reviews/`);
       setReviews(res.data);
     } catch (err) {
       console.error("Reviews fetch error", err);
@@ -41,7 +41,7 @@ export default function CourseDetail() {
 
     try {
       const res = await axios.post(
-        `http://127.0.0.1:8000/api/courses/${id}/reviews/add/`,
+        `https://skillup-website.onrender.com/api/courses/${id}/reviews/add/`,
         { rating, comment },
         {
           headers: {
@@ -65,7 +65,7 @@ export default function CourseDetail() {
 
     try {
       await axios.post(
-        `http://127.0.0.1:8000/api/courses/${id}/enroll/`,
+        `https://skillup-website.onrender.com/api/courses/${id}/enroll/`,
         {},
         {
           headers: {
