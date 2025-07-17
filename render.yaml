@@ -17,3 +17,18 @@ services:
         value: skillup-website.onrender.com
       - key: DEBUG
         value: "False"
+
+  - type: web
+    name: react-frontend
+    env: static
+    buildCommand: cd skilup-frontend && npm install && npm run build
+    staticPublishPath: skilup-frontend/dist
+    headers:
+      - source: "/*"
+        headers:
+          - key: "Cache-Control"
+            value: "no-cache"
+    routes:
+      - type: rewrite
+        source: "/*"
+        destination: /index.html
