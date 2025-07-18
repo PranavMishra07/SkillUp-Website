@@ -7,7 +7,7 @@ services:
       python manage.py makemigrations &&
       python manage.py migrate &&
       gunicorn backend.wsgi:application &&
-      python manage.py collectstatic --noinput &&
+      python manage.py collectstatic --noinput 
 
     workingDir: backend
     envVars:
