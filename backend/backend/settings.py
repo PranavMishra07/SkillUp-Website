@@ -96,7 +96,7 @@ WSGI_APPLICATION = 'backend.wsgi.application'
 CORS_ALLOWED_ORIGINS = [
     "http://localhost:5173",
     "http://localhost:5174",
-    "https://skillup-website-1.onrender.com"
+    "https://skillup-website-1.onrender.com","https://skill-up-website-7pvhquz2v-pranav-mishras-projects-bea99af6.vercel.app"
 ]
 # Database  
 # https://docs.djangoproject.com/en/5.2/ref/settings/#databases
