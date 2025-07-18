@@ -23,12 +23,15 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-27dyy3sk9z7n!8kq$()^p$)m0l)yyzm8b(xx_uuw%vzx#*4q!j'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
-
-# ALLOWED_HOSTS = ["https://skillup-website.onrender.com","127.0.0.1","localhost"]
+# DEBUG = True
 import os
+DEBUG = os.environ.get('DEBUG', 'False') == 'True'
 
-ALLOWED_HOSTS = os.getenv('ALLOWED_HOSTS', 'localhost').split(',')
+
+ALLOWED_HOSTS = ["https://skillup-website.onrender.com","127.0.0.1","localhost"]
+# import os
+
+# ALLOWED_HOSTS = os.getenv('ALLOWED_HOSTS', 'localhost').split(',')
 
 
 # Application definition
