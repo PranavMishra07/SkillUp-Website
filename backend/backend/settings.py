@@ -28,10 +28,10 @@ import os
 DEBUG = os.environ.get('DEBUG', 'False') == 'True'
 
 
-ALLOWED_HOSTS = ["https://skillup-website.onrender.com","127.0.0.1","localhost"]
-# import os
+# ALLOWED_HOSTS = ["https://skillup-website.onrender.com","127.0.0.1","localhost"]
+import os
 
-# ALLOWED_HOSTS = os.getenv('ALLOWED_HOSTS', 'localhost').split(',')
+ALLOWED_HOSTS = os.getenv('ALLOWED_HOSTS', 'localhost').split(',')
 
 
 # Application definition
