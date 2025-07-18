@@ -6,7 +6,9 @@ services:
     startCommand: |
       python manage.py makemigrations &&
       python manage.py migrate &&
-      gunicorn backend.wsgi:application
+      gunicorn backend.wsgi:application &&
+      python manage.py collectstatic --noinput &&
+
     workingDir: backend
     envVars:
       - key: DJANGO_SETTINGS_MODULE
