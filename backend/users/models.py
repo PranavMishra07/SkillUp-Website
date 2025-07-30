@@ -25,7 +25,7 @@ class UserManager(BaseUserManager):
 
         return self.create_user(email, password, **extra_fields)
 
-# ✅ 2. Custom user model
+#  2. Custom user model
 class User(AbstractUser):
     ROLE_CHOICES = (
         ('learner', 'Learner'),
@@ -33,7 +33,7 @@ class User(AbstractUser):
         ('admin', 'Admin'),
     )
 
-    username = None  # ❌ Disable username field
+    username = None  #  Disable username field
     email = models.EmailField(unique=True)
     role = models.CharField(max_length=20, choices=ROLE_CHOICES, default='learner')
     is_verified = models.BooleanField(default=False)

@@ -56,7 +56,7 @@ export default function Login() {
   };
 
   return (
-    <div className="flex items-center justify-center min-h-screen bg-gray-100 px-4">
+    <div className= "flex items-center justify-center min-h-screen bg-gray-100 px-4">
       <div className="w-full max-w-md bg-white p-6 rounded-xl shadow-md">
         <h2 className="text-2xl font-bold text-center text-blue-600 mb-6">Login to SkillUp</h2>
 
@@ -91,8 +91,10 @@ export default function Login() {
           >
             Login
           </button>
+
         </form>
       </div>
+      
     </div>
   );
 }

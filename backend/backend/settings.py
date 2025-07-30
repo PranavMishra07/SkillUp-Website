@@ -48,6 +48,7 @@ INSTALLED_APPS = [
     'rest_framework',
     'rest_framework_simplejwt',    
     'corsheaders',
+    
 
     
     'users',
@@ -72,7 +73,10 @@ AUTH_USER_MODEL = 'users.User'
 REST_FRAMEWORK = {
     'DEFAULT_AUTHENTICATION_CLASSES': (
         'rest_framework_simplejwt.authentication.JWTAuthentication',
-    )
+    ),
+#     'DEFAULT_PERMISSION_CLASSES': (
+#          'rest_framework.permissions.IsAuthenticated',
+#      ),
 }
 
 
@@ -150,6 +154,8 @@ STATIC_URL = '/static/'
 # For Production
 
 STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
+# white nose addded to middlewere
+# STATICFILES_STORAGE = "whitenoise.storage.CompressedManifestStaticFilesStorage"
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/5.2/ref/settings/#default-auto-field

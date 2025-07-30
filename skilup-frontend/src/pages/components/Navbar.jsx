@@ -3,6 +3,7 @@ import { AuthContext } from "../../context/AuthContext";
 import { useContext } from "react";
 
 import {FaUserCircle} from "react-icons/fa"
+
 export default function Navbar() {
 
 const {isAuthenticated,role,logoutUser} = useContext(AuthContext);
@@ -39,22 +40,23 @@ const {isAuthenticated,role,logoutUser} = useContext(AuthContext);
   //       </div>
   //     </div>
   //   </nav>
-    <nav className="bg-white shadow-md py-3 px-6 flex justify-between items-center">
-      <Link to="/" className="text-2xl font-bold text-blue-600">SkillUp</Link>
+    <nav className="bg-gray-900 shadow-md py-3 px-6 flex justify-between items-center">
+      <Link to="/" className="text-2xl font-bold text-blue-400">SkillUp</Link>
 
       <div className="flex items-center space-x-4">
-        <Link to="/courses" className="text-gray-700 hover:text-blue-600">
+        <Link to="/courses" className="text-gray-200 hover:text-lime-400">
           Courses
         </Link>
+        
 
         {!isAuthenticated ? (
           <>
-            <Link to="/login" className="text-gray-700 hover:text-blue-600">
+            <Link to="/login" className="text-gray-200 hover:text-lime-400">
               Login
             </Link>
             <Link
               to="/signup"
-              className="bg-blue-600 text-white px-4 py-1 rounded hover:bg-blue-700"
+              className="bg-blue-500 text-white px-4 py-1 rounded hover:bg-blue-700"
             >
               Signup
             </Link>
@@ -74,8 +76,11 @@ const {isAuthenticated,role,logoutUser} = useContext(AuthContext);
             >
               Logout
             </button>
+            
           </>
         )}
+        
+            
       </div>
     </nav>
   
